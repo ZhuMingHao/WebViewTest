@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:WebViewTest"
+             x:Class="WebViewTest.MainPage">
+    <ContentPage.BindingContext>
+        <local:MainPageViewModel />
+    </ContentPage.BindingContext>
+    <StackLayout x:Name="Root">
+        <Button Text="ClickMe" x:Name="Mybtn" />
+        <WebView x:Name="MyWebView" HeightRequest="500" Source="https://www.cnet.com"  IsVisible="{Binding IsWebViewVisible}" />
+    </StackLayout>
+</ContentPage>
